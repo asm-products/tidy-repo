@@ -1,0 +1,9 @@
+.DS_Store
+.sass-cache
+.codekit-cache
+node_modules
+upgrade/
+uploads/
+ewww/
+db.php
+plugins/gravityforms
