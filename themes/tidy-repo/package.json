@@ -1,0 +1,10 @@
+{
+  "name": "Grunt-Tidy-Repo",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-autoprefixer": "^1.0.0",
+    "grunt-criticalcss": "^0.1.10",
+    "grunt-svgstore": "^0.4.1"
+  }
+}
