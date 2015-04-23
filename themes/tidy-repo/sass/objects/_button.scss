@@ -1,0 +1,36 @@
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	height: 2em;
+	vertical-align: middle;
+	padding: 0 .5em 0 .5em;
+	background: $dark-color;
+	color: #fff;
+	text-decoration: none;
+	-webkit-appearance: none;
+	border: 0;
+	font-size: $h6-size;
+}
+
+.btn:hover {
+	background: $main-color;
+	color: #fff;
+}
+
+.btn-nav {
+	display: none;
+	
+	@include bp(mobile) {
+		position: absolute;
+		top: 0.25em;
+		right: 1em;
+		border: 0;
+		background: $main-color;
+		color: white;
+		padding: .5em 1em .5em 1em;
+		text-transform: uppercase;
+		display: block;
+		border-radius: 3px;
+		font-size: 0.8em;
+	}
+}

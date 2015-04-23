@@ -1,0 +1,32 @@
+.rp4wp-related-posts ul{
+	padding:0;
+	margin:0 0 3em 0;
+	@extend .g;
+}
+
+.rp4wp-related-posts ul>li{
+	list-style:none;
+	margin-bottom: 1em;
+	@extend .u-1-3;
+
+	@extend .baby-full;
+}
+
+.rp4wp-related-posts p{
+	margin:0;
+	padding:0;
+}
+
+.rp4wp-related-posts h3{
+	margin-bottom:1em;
+}
+
+.rp4wp-related-post-image {
+	box-sizing:border-box;
+	margin-bottom: 0.5em;
+}
+
+.rp4wp-related-post-content a {
+	font-family: $header-stack;
+	font-weight: bold;
+}

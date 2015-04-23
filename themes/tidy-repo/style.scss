@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/*!
+Theme Name: Tidy Repo v2
+Author: Jason Hoffmann & Jack McConnell
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+
+@import "sass/variables";
+
+@import "sass/base/reset";
+@import "sass/base/typography";
+
+@import "sass/generic/colors";
+@import "sass/generic/clearfix";
+@import "sass/generic/typography";
+@import "sass/generic/helpers";
+@import "sass/generic/links";
+@import "sass/generic/layout";
+
+@import "sass/objects/header";
+@import "sass/objects/footer";
+@import "sass/objects/nav";
+@import "sass/objects/button";
+@import "sass/objects/search";
+@import "sass/objects/blocks";
+@import "sass/objects/sidebar";
+@import "sass/objects/forms";
+@import "sass/objects/image";
+@import "sass/objects/lists";
+@import "sass/objects/icons";
+@import "sass/objects/ribbon";
+@import "sass/objects/pagination";
+@import "sass/objects/post";
+@import "sass/objects/grid";
+@import "sass/objects/relatedposts";
+@import "sass/objects/hero";

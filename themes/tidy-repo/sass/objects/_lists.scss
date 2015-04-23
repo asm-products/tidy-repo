@@ -1,0 +1,50 @@
+.list__item {
+	list-style-type: none;
+}
+
+.lst-double {
+	margin-bottom: 1em;
+	overflow: hidden;
+	padding-left: 0;
+
+	.list__item {
+		float: left;
+		display: inline;
+		width: 50%;
+	}
+}
+
+.lst-triple {
+	margin-bottom: 1em;
+	overflow: hidden;
+
+	.list__item {
+		float: left;
+		display: inline;
+		width: 33%;
+		line-height: 1.4371;
+
+		@include bp(baby-bear) {
+		    width: 50%;
+		}
+	}
+}
+
+.lst-drop:hover .lst-nav {
+	visibility: visible;
+	opacity: 1;
+}
+
+.lst-drop:hover .nav--drop {
+	color: $main-color;
+}
+
+.lst-info {
+	padding-left: 0;
+	font-size: $milli-size;
+	line-height: 1.75em;
+
+	& li {
+		list-style-type: none;
+	}
+}

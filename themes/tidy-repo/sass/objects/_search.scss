@@ -1,0 +1,100 @@
+.search-bar {
+	float: right;
+	height: 30px;
+	margin-bottom: 0;
+	position: relative;
+
+	@include bp(mobile) {
+		width: 100%;
+		float: none;
+	}
+
+	.u-3-5 {
+		@include bp(mobile) {
+			width: 100%;
+		}
+	}
+}
+
+.search--wrap {
+	max-width: 1140px;
+	padding: 0 13px;
+	margin: 0 auto;
+}
+
+.bl-d {
+	width: 100%;
+	clear: both;
+	padding: 1.09em;
+	background: $footer-color;
+	position: absolute;
+	top: 0;
+	z-index: 5;
+
+	@include bp(mobile) {
+		position: relative;
+		z-index: 10;
+		background: white;
+		margin-top: -1.25em;
+	}
+}
+
+.search--label {
+	margin-right: 1em;
+
+	& + input#s {
+		width: 285px;
+		height: 32px;
+		background: #fff;
+		border: 1px solid $text-light;
+		padding: 0 3px;
+
+		&:focus {
+			outline: none;
+		}
+
+		@include bp(mobile) {
+			width: 100%;
+		}
+	}
+
+	@include bp(mobile) {
+		display: none;
+	}
+}
+
+.btn-search {
+	background: transparent;
+	-webkit-appearance: none;
+	border: 0;
+	position: absolute;
+	top: 0.15em;
+	right: 0;
+}
+
+.srch #searchform input {
+	width: 50%;
+	height: 2em;
+}
+
+#js-search {
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+#js-searchBtn {
+	display: inline-block;
+	@include bp(mobile) {
+		display: none;
+	}
+}
+
+#js-search.toggle {
+	top: 5em;
+
+
+	@include bp(mobile) {
+		top: 0;
+	}
+}

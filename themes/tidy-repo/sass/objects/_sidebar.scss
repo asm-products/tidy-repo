@@ -1,0 +1,81 @@
+.widget, .crp_related {
+	padding: 1em 0 1.75em 0;
+	border-bottom: 1px solid #d3d3d3;
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	h5 {
+		margin-top: 0;
+		font-size: 1.3em;
+		font-weight: 400;
+	}
+
+	.wp-post-image {
+		border-radius: 4px;
+	}
+}
+
+.ft--item {
+	margin-bottom: 1em;
+
+	@include bp(papa-bear) {
+		width: 48%;
+		float: left;
+		margin-right: 2%;
+	}
+}
+
+.related {
+	padding-left: 0;
+}
+
+.rl--item {
+	list-style-type: none;
+
+	&:before {
+		display: inline-block;
+		content: '';
+		background-image: url(svgs/individual/post.svg);
+		background-size: 15px 15px;
+		width: 15px;
+		height: 15px;
+	}
+}
+
+.lst-info__link {
+	margin-top: 1.25em;
+	display: inline-block;
+	background: $main-color;
+	padding: 0.75em;
+	color: white;
+	border-radius: 5px;
+
+	&:hover {
+		background: $text-light;
+		color: $text-color;
+	}
+}
+
+.see-all {
+	margin: 0 auto 2.5em auto;
+	text-align: center;
+	font-size: $h4-size;
+	font-family: $header-stack;
+}
+
+.rating-bar {
+	display: inline-block;
+	background: $text-color;
+	width: 65%;
+	height: 1em;
+	position: relative;
+	top: .1em;
+}
+
+.rb--fill {
+	display: block;
+	height: 1em;
+	background: #E7D061;
+}

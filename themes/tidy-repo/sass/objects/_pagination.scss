@@ -1,0 +1,34 @@
+.pagination {
+    text-align: center;
+    margin-bottom: 6em;
+
+    @include bp(baby-bear) {
+        text-align: right;
+    }
+}
+
+.page-numbers {
+    font-size: $h5-size;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 .5em 0 .5em;
+    background: white;
+    color: $main-color;
+    line-height: 2;
+    margin-left: .5em;
+    border-radius: 3px;
+
+    @include bp(baby-bear) {
+        margin-bottom: 1em;
+    }
+}
+
+.page-numbers.current {
+    color: white;
+}
+
+.page-numbers:hover {
+    background: $main-color;
+    color: white;
+}

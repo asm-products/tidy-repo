@@ -1,0 +1,23 @@
+.ribbon {
+	position: absolute;
+	right: -30px;
+	top: 33px;
+	width: 150px;
+	background: #F5A623;
+	transform: rotate(45deg);
+	text-align: center;
+	font-family: $header-stack;
+	text-transform: uppercase;
+	font-size: $h6-size;
+	color: $dark-color;
+	font-weight: bold;
+}
+
+.ad-ribbon {
+	position: relative;
+	width: 160px;
+	transform: none;
+	right: 0;
+	background: transparent;
+	top: 0;
+}

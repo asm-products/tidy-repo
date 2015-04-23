@@ -1,0 +1,280 @@
+$max_width: 1140;
+$gutter: 26;
+$columns: 12;
+$outside_margin: 11;
+
+@function page-width() {
+    $new_width: $max_width - ($outside_margin * 2);
+    $allgutters: $gutter * ($columns - 1);
+    $new_width: $new_width - $allgutters;
+    $remainder: $new_width % $columns;
+
+    @if ($remainder == 0) {
+        @return $max_width - ($outside_margin * 2);
+    } @else {
+        $page_width: $max_width - $remainder;
+        @return $page_width - ($outside_margin * 2);
+    }
+    
+}
+
+@function calc-column($page_width) {
+    $full_width: $page_width - ($gutter * ($columns - 1));
+    $column_width: $full_width / $columns;
+    @return $column_width;
+    
+}
+
+@function get-column($col_number) {
+    $page_width: page-width();
+    $col_width: calc-column($page_width);
+    $gutter_width: $gutter * ($col_number - 1);
+    $col-percent: ($col_width * $col_number) + $gutter_width;
+    @return ($col-percent / $page_width) * 100%;
+}
+
+@function get-padding() {
+    $new_width: $max_width - ($outside_margin * 2);
+    $allgutters: $gutter * ($columns - 1);
+    $new_width: $new_width - $allgutters;
+    $remainder: $new_width % $columns;
+    @return ($outside_margin) + ($remainder / 2) + px;
+}
+
+.wrapper, .header--wrap {
+    margin: 0 auto -18em;
+    width: 100%;
+    padding: 0 get-padding();
+    max-width: $max-width + px;
+
+    @media all and (max-width: $max_width + px) {
+        padding-left: 4%;
+        padding-right: 4%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.contain {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 get-padding();
+    max-width: $max-width + px;
+
+    @media all and (max-width: $max_width + px) {
+        padding-left: 4%;
+        padding-right: 4%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.header--wrap {
+    position: relative;
+}
+
+.g {
+    letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+    *letter-spacing: normal; /* reset IE < 8 */
+    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+    
+    display: flex;
+
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+
+    flex-wrap: wrap;
+
+    /* IE10 uses display: flexbox */
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+
+    justify-content: space-between;
+}
+
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+.opera-only :-o-prefocus,
+.g {
+    word-spacing: -0.43em;
+}
+
+.ad-g {
+    flex-wrap: nowrap;
+    @include bp(papa-bear) {
+        flex-wrap: wrap;
+    }
+}
+
+.u-1-12,
+.u-2-12,
+.u-3-12,
+.u-4-12,
+.u-5-12,
+.u-6-12,
+.u-7-12,
+.u-8-12,
+.u-9-12,
+.u-10-12,
+.u-11-12,
+.u-12-12,
+.md-wg-deal-link,
+.ad-g-u {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+
+.u-1-12 {
+    width: get-column(1);
+}
+
+.u-2-12 {
+    width: get-column(2);
+}
+
+.u-3-12 {
+    width: get-column(3);
+}
+
+.u-1-4 {
+    @extend .u-3-12;
+}
+
+.u-4-12 {
+    width: get-column(4);
+}
+
+.u-1-3 {
+    @extend .u-4-12
+}
+
+.u-5-12 {
+    width: get-column(5);
+}
+
+.u-6-12 {
+    width: get-column(6);
+}
+
+.u-1-2 {
+    @extend .u-6-12;
+}
+
+.u-7-12 {
+    width: get-column(7);
+}
+
+.u-8-12 {
+    width: get-column(8);
+}
+
+.u-2-3 {
+    @extend .u-8-12;
+}
+
+.u-9-12 {
+    width: get-column(9);
+}
+
+.u-3-4 {
+    @extend .u-9-12;
+
+    @include bp(papa-bear) {
+        width: 100%;
+    }
+}
+
+.u-10-12 {
+    width: get-column(10);
+}
+
+.u-11-12 {
+    width: get-column(11);
+}
+
+.u-12-12 {
+    width: get-column(12);
+}
+
+.u-1, .related-posts h2 {
+    @extend .u-12-12;
+}
+
+.papa-full {
+    @include bp(papa-bear) {
+        width: 100%;
+    }
+}
+
+.papa-half {
+    @include bp(papa-bear) {
+        width: get-column(6);
+    }
+}
+
+.baby-full {
+    @include bp(baby-bear) {
+        width: 100%;
+    }
+}
+
+.mobile-full {
+    @include bp(mobile) {
+        width: 100%;
+    }
+}
+
+.ad-u-left {
+    max-width: get-column(9);
+
+    @include bp(papa-bear) {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.ad-u-right {
+    width: 300px;
+    margin-left: 26px;
+
+    @include bp(papa-bear) {
+        width: 100%;
+    }
+}
+
+.p-box {
+    margin: 0 0 1.26em 0;
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+    background: white;
+}
+
+.asmo-header {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.asmo-text {
+    font-size: 0.75em;
+    text-align: left;
+    margin-top: 0.5em;
+}
+
+.asmo-box {
+    margin: 0 0 2em 0;
+    position: relative;
+
+}
+
+.ft-box {
+    margin: 0.5em auto;
+}

@@ -1,0 +1,88 @@
+#svgs {
+	display: none;
+}
+
+#svgs-2 {
+	display: none;
+}
+
+.icon {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	fill: white;
+}
+
+.shape-search {
+	width: 20px;
+	height: 24px;
+	position: relative;
+	top: 6px;
+	fill: $text-light;
+
+	&:hover, &:focus, &:active {
+		fill: $main-color;
+	}
+}
+
+.shape-searchbutton {
+	fill: $dark-color;
+	width: 22px;
+	height: 22px;
+}
+
+.shape-category {
+	fill: $text-color;
+	width: 18px;
+	height: 18px;
+	position: relative;
+	top: 3px;
+}
+
+.shape-plugin {
+	fill: $main-color;
+	width: 30px;
+	height: 30px;
+
+	@include bp(baby-bear) {
+		width: 25px;
+		height: 25px;
+	}
+}
+
+.shape-author, .shape-calendar, .shape-meta-category {
+	fill: $text-color;
+	width: 17px;
+	height: 17px;
+	position: relative;
+	top: 3px;
+}
+
+.ft-nav .icon {
+	padding: 3px;
+	border-radius: 3px;
+	margin-right: .75em;
+
+	&:hover {
+		background: $text-light;
+	}
+}
+
+.shape-twitter {
+	background: #55ACEE;
+}
+
+.shape-facebook {
+	background: #3B5998;
+}
+
+.shape-rss {
+	background: #FF6600;
+}
+
+.shape-scl {
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: 3px;
+}

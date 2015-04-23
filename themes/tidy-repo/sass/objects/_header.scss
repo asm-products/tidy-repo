@@ -1,0 +1,64 @@
+.header {
+	background: $light-color;
+	padding: 0.8em 0 1.2em 0;
+	margin-bottom: 1.25em;
+	line-height: 1;
+	position: relative;
+	z-index: 6;
+
+	@include bp(mobile) {
+		margin-bottom: 0;
+	}
+
+	.tagline {
+		margin: 0;
+		text-align: left;
+
+	}
+
+	h1 {
+		font-weight: 700;
+		margin: 0;
+		line-height: 1.1;
+		text-align: left;
+
+		@include bp(baby-bear) {
+			font-size: 1.9em;
+		}
+ 	}
+}
+
+.header--title {
+	float: left;
+
+	@include bp(baby-bear) {
+		width: 270px;
+	}
+}
+
+.header--title .tagline {
+	@include bp(baby-bear) {
+		line-height: 1.333;
+	}
+}
+
+header.page-header,
+header.section-header {
+	h1, h2 {
+		font-size: 22px;
+		font-weight: 400;
+	}
+
+	h1 {
+		margin: 44px 0 19px 0;
+	}
+
+	h2 {
+		margin: 21px 0 19px 0;
+	}
+}
+
+.relative {
+	position: relative;
+	overflow: hidden;
+}

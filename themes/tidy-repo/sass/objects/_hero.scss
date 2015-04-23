@@ -1,0 +1,135 @@
+.hero {
+	background: url(./img/Background-FindaPlugin.jpg) no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	margin-top: -1.25em;
+	padding: 5em;
+	position: relative;
+	overflow: hidden;
+	color: white;
+	z-index: 1;
+	text-align: center;
+
+	@include bp(baby-bear) {
+		padding: 2em 1em 2em 1em;
+	}
+}
+
+.hero:before {
+	background: rgba(105, 188, 147, .9);
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 35em;
+	z-index: -2;
+}
+
+.hero--title {
+	font-family: "Montserrat",sans-serif;
+	font-size: 2.5em;
+	margin-bottom: 0;
+
+	@include bp(baby-bear) {
+		font-size: 1.75em;
+	}
+}
+
+.hero--caption {
+	font-size: $h3-size;
+	width: 50%;
+	margin: 0 auto;
+
+	@include bp(baby-bear) {
+		font-size: 1em;
+		width: 100%
+	}
+}
+
+.hero--btn {
+	background: #0E92E7;
+	font-size: $h3-size;
+	padding: 1em;
+	color: white;
+	border-radius: 5px;
+	font-weight: bold;
+	display: inline-block;
+	margin-top: 3em;
+	transition: background .2s;
+
+	&:hover {
+		color: white;
+		background: lighten(#0E92E7, 10%);
+	}
+}
+
+.more-info {
+	margin: 2em auto;
+	h4 {
+		font-weight: 300;
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	.u-1-3 {
+		width: 30%;
+
+		@include bp(baby-bear) {
+			width: 100%;
+		}
+	}
+}
+
+.bg-white {
+	background: white;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.add-ons {
+	header {
+		text-align: center;
+
+		h1 {
+			margin-bottom: 0;
+		}
+
+		p {
+			margin-top: 0;
+		}
+	}
+}
+
+.info-icon {
+	display: block;
+	float: left;
+	padding-right: 1em;
+	fill: $main-color;
+	margin-top: 1em;
+}
+
+.info {
+	float: left;
+
+	h5 {
+		font-weight: normal;
+		font-size: 1em;
+	}
+}
+
+.endline {
+	text-align: center;
+	.h1 {
+		margin: 2em auto;
+	}
+
+	.hero--btn {
+		margin-top: -1em;
+		margin-bottom: 2em;
+	}
+}
+
+.form-addons {
+	font-size: 0.75em;
+}

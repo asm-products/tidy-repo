@@ -1,0 +1,70 @@
+// Typography
+
+body {
+  font-size: 1.063em;
+}
+
+$h1-size: 2.084em;
+$h2-size: 1.625em;
+$h3-size: 1.294em;
+$h4-size: 1.188em;
+$h5-size: 1.0625em;
+$h6-size: 0.938em;
+$milli-size: 0.882em;
+$micro-size: 0.765em;
+
+$header-stack: 'Montserrat', sans-serif;
+$body-stack : 'Open Sans', sans-serif;
+
+// Margins
+$full-push: 24px;
+$half-push: 16px;
+$little-push: 12px;
+
+
+// Colors
+$dark-color: rgb(95, 95, 95); //#5F5F5F
+
+$footer-color: rgb(233, 233, 233); //#E9E9E9
+
+$black-color: #333;
+
+$light-color: rgb(255, 255, 255); //#FFFFFF
+
+$main-color: rgb(105, 188, 147); //#69BC93
+
+$text-color: rgb(99, 99, 99); //#636363
+
+$text-light: rgb(180, 180, 180); //#B4B4B4
+
+$bold-color: #5f5f5f;
+
+$background-color: rgb(243, 243, 243); //#F3F3F3
+
+
+// Media Query Mixin
+// @include bp(baby-bear) {
+// ..CSS
+// }
+
+@mixin bp($point) {
+  
+  $bp-babybear: "(max-width: 600px)";
+  $bp-papabear: "(max-width: 950px)";
+  $bp-largest:  "(max-width: 1250px)";
+  $bp-mobile :  "(max-width: 768px)";
+
+  @if $point == mobile {
+    @media #{$bp-mobile} { @content; }
+  }
+  @if $point == papa-bear {
+    @media #{$bp-papabear} { @content; }
+  }
+  @else if $point == baby-bear {
+    @media #{$bp-babybear} { @content; }
+  }
+  @else if $point == largest {
+  	@media #{$bp-largest} { @content; }
+  }
+
+}

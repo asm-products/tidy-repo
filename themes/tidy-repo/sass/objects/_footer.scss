@@ -1,0 +1,86 @@
+.footer {
+	height: 20em;
+	background: $footer-color;
+	color: $text-color;
+}
+
+.footer-push {
+	height: 18em;
+}
+
+.footer {
+
+	@include bp(papa-bear) {
+	    height: 30em;
+	}
+
+	@include bp(baby-bear) {
+	   height: 48em;
+	}
+}
+
+.ft--block {
+	margin: 0 auto 0 auto;
+	padding-top: 1em;
+	width: auto;
+
+	@include bp(baby-bear) {
+	   padding-left: 4%;
+	   padding-right: 4%;
+	}
+}
+
+.ft-box {
+
+	.list.lst-triple {
+		padding: 0 0 0 0;
+	}
+
+	h3 {
+		margin: 15px 0 21px 0;
+		font: 400 17px $body-stack !important;
+	}
+
+	&#ft-about {
+
+		@include bp(mobile) {
+			margin-left: auto;
+		}
+	}
+
+	.ft-nav {
+		.nav--block {
+			font-size: 13px;
+
+			&.push-top {
+				margin-top: 13px;
+			}
+		}
+	}
+
+	&#ft-nav-copy {
+		margin-top: 68px;
+		line-height: 18px;
+
+		p {
+			font-size: 13px;
+		}
+
+		@include bp(papa-bear) {
+			margin-top: 0;
+		}
+	}
+}
+
+#ft-cat {
+	float: right;
+}
+
+.ft-right {
+	width: 75%;
+	float: left;
+
+	@include bp(baby-bear) {
+	    width: 100%;
+	}
+}
