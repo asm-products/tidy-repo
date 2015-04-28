@@ -6,11 +6,11 @@
 
 Welcome to Tidy Repo, a curated list of WordPress plugins.
 
-I've made it as simple as possible to get started developing this site locally, staying more or less up to date with the data that is on the live site.
+I've made it as simple as possible to get started developing this site locally, staying more or less up to date with the data on the live site.
 
 To get started,
 
-1. Clone this repo into an empty (delted) wp-content folder of a fresh WordPress install
+1. Clone this repo into an empty (deleted) wp-content folder of a fresh WordPress install
 2. Go into the WordPress admin and activate all plugins
 3. Go to Tools -> Import and select "Options"
 4. Upload the JSON file included in this repo (e.g. tidyrepo.wp_options.2015-04-21.json)
@@ -22,7 +22,7 @@ To get started,
 This should be enough to get you started with a fully working site that mirrors the live site
 
 ### Notes on Plugin
-The only plugin not included in this repo is Gravity Forms, which is a premium plugins. Would definitely love free alternatives to this at some point.
+The only plugin not included in this repo is Gravity Forms, which is a premium plugin. We would definitely love a free alternatives to this at some point.
 
 ### Notes on Theme
 The Theme makes use of SASS to make managing CSS a bit easier. There are improvements to be made here, but I've used Codekit in the past to compile this SASS. This can be compiled with any tool though, as long as it compiles to "style.css" in the root directory of the "tidy-repo" theme.
